@@ -29,8 +29,7 @@ def full_url(link):
 
     This uses the PAYFAST_URL_BASE setting.
     """
-    url_base = (conf.URL_BASE() if callable(conf.URL_BASE) else
-                conf.URL_BASE)
+    url_base = conf.URL_BASE() if callable(conf.URL_BASE) else conf.URL_BASE
     return urljoin(url_base, link)
 
 
